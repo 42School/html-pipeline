@@ -14,7 +14,7 @@ module HTML
           default = context[:highlight] && context[:highlight].to_s
           next unless lang = node['lang'] || default
           next unless lexer = lexer_for(lang)
-          text = node.inner_text
+          text = "\n" + node.inner_text
 
           html = highlight_with_timeout_handling(lexer, text)
           next if html.nil?
