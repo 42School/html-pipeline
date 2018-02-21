@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.12.0
+
+  * Fix `lexer_for` method
+
 ## 1.11.0
 
   * Search for text nodes on DocumentFragments without root tags #146 Razer6
