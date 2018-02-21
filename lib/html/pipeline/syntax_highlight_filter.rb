@@ -36,7 +36,7 @@ module HTML
       end
 
       def lexer_for(lang)
-        (Linguist::Language[lang] && Linguist::Language[lang].lexer) || Pygments::Lexer[lang]
+        Linguist::Language[lang].lexer rescue nil || Pygments::Lexer[lang]
       end
     end
   end
